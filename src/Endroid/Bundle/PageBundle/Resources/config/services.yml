@@ -1,0 +1,14 @@
+services:
+
+    endroid_page.admin.page:
+        class: Endroid\Bundle\PageBundle\Admin\PageAdmin
+        arguments: [null,  Endroid\Bundle\PageBundle\Entity\Page, null]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Content, label: Pagina's }
+
+    endroid_page.route_provider:
+        class: Endroid\Bundle\PageBundle\Service\RouteProvider
+        calls:
+            - [ setContainer, [ @service_container ] ]
+        tags:
+            -  { name: endroid_route.provider }

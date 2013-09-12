@@ -1,0 +1,3 @@
+endroid_news_article_index: /news/
+endroid_news_article_show: '/news/{slug}'
+endroid_search_search_index: /search/

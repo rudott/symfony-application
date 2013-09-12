@@ -1,0 +1,5 @@
+admin:
+    behavior:
+        publishable:
+            publish: Publiceren
+            published: Gepubliceerd

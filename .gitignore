@@ -1,0 +1,24 @@
+# Symfony
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+/app/SymfonyRequirements.php
+/bin/
+/build/
+/vendor/
+/web/bundles/
+/web/uploads/
+/composer.phar
+/php-cs-fixer.phar
+
+# Deployment
+/app/config/deploy.rb
+/Capfile
+/current
+/releases/
+/shared/
+/reset.sh
+
+# IDE
+/.idea

@@ -1,0 +1,50 @@
+services:
+
+    endroid_behavior.publishable.extension:
+        class: Endroid\Bundle\BehaviorBundle\Admin\Extension\PublishableAdminExtension
+        tags:
+            - { name: sonata.admin.extension }
+
+    endroid_behavior.publishable.listener:
+          class: Endroid\Bundle\BehaviorBundle\EventListener\PublishableListener
+          calls:
+              - [ setContainer, [ @service_container ] ]
+          tags:
+              - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    endroid_behavior.sluggable.listener:
+        class: Endroid\Bundle\BehaviorBundle\EventListener\SluggableListener
+        tags:
+            - { name: doctrine.event_listener, event: prePersist, method: onPrePersist }
+
+    endroid_behavior.sortable.listener:
+        class: Endroid\Bundle\BehaviorBundle\EventListener\SortableListener
+        tags:
+            - { name: doctrine.event_listener, event: postPersist, method: onPostPersist }
+            - { name: doctrine.event_listener, event: preUpdate, method: onPreUpdate }
+
+    endroid_behavior.timestampable.listener:
+        class: Endroid\Bundle\BehaviorBundle\EventListener\TimestampableListener
+        tags:
+            - { name: doctrine.event_listener, event: prePersist, method: onPrePersist }
+            - { name: doctrine.event_listener, event: preUpdate, method: onPreUpdate }
+
+    endroid_behavior.translatable.listener:
+          class: Endroid\Bundle\BehaviorBundle\EventListener\TranslatableListener
+          calls:
+              - [ setContainer, [ @service_container ] ]
+          tags:
+              - { name: doctrine.event_listener, event: loadClassMetadata , method: onLoadClassMetadata }
+              - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    endroid_behavior.traversable.listener:
+        class: Endroid\Bundle\BehaviorBundle\EventListener\TraversableListener
+        tags:
+            - { name: doctrine.event_listener, event: loadClassMetadata , method: onLoadClassMetadata }
+
+    endroid_behavior.traversable.extension:
+        class: Endroid\Bundle\BehaviorBundle\Admin\Extension\TraversableAdminExtension
+        tags:
+            - { name: sonata.admin.extension }
+        calls:
+            - [ setContainer, [ @service_container ] ]

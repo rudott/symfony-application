@@ -1,0 +1,14 @@
+services:
+
+    endroid_news.admin.article:
+        class: Endroid\Bundle\NewsBundle\Admin\ArticleAdmin
+        arguments: [null,  Endroid\Bundle\NewsBundle\Entity\Article, null]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Content, label: Nieuws }
+
+    endroid_news.route_provider:
+        class: Endroid\Bundle\NewsBundle\Service\RouteProvider
+        calls:
+            - [ setContainer, [ @service_container ] ]
+        tags:
+            -  { name: endroid_route.provider }

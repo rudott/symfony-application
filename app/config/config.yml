@@ -1,0 +1,169 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: search.yml }
+
+framework:
+    esi:             ~
+    translator:      { fallback: %locale% }
+    secret:          %secret%
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        assets_version: 1.0.0
+    default_locale:  "%locale%"
+    trusted_proxies: ~
+    session:         ~
+    fragments:       ~
+    http_method_override: true
+
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+    globals:
+        locales: %locales%
+    form:
+        resources:
+            - 'EndroidSiteBundle:Form:fields.html.twig'
+
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    bundles:        [ EndroidSiteBundle ]
+    java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        yui_css:
+            jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
+        yui_js:
+            jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
+
+doctrine:
+    dbal:
+        driver:   %database_driver%
+        host:     %database_host%
+        port:     %database_port%
+        dbname:   %database_name%
+        user:     %database_user%
+        password: %database_password%
+        charset:  UTF8
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true
+        filters:
+            publishable:
+                class:   Endroid\Bundle\BehaviorBundle\Filter\PublishableFilter
+                enabled: false
+            translation:
+                class:   Endroid\Bundle\BehaviorBundle\Filter\TranslationFilter
+                enabled: false
+
+swiftmailer:
+    transport: %mailer_transport%
+    host:      %mailer_host%
+    username:  %mailer_user%
+    password:  %mailer_password%
+    spool:     { type: memory }
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        sonata.block.service.text: ~
+        sonata.block.service.rss: ~
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: Endroid\Bundle\UserBundle\Entity\User
+    group:
+        group_class: Endroid\Bundle\UserBundle\Entity\Group
+
+sonata_user:
+    security_acl: true
+    manager_type: orm
+    class:
+        user: Endroid\Bundle\UserBundle\Entity\User
+        group: Endroid\Bundle\UserBundle\Entity\Group
+
+sonata_admin:
+    title: Symfony Standard
+    title_logo: /bundles/endroidadmin/img/logo_title.png
+    templates:
+        layout: EndroidAdminBundle::layout.html.twig
+    extensions:
+        endroid_behavior.publishable.extension:
+            implements:
+                - Endroid\Bundle\BehaviorBundle\Model\PublishableInterface
+        endroid_behavior.traversable.extension:
+            implements:
+                - Endroid\Bundle\BehaviorBundle\Model\TraversableInterface
+
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     %kernel.root_dir%/Resources/java/wkhtmltopdf
+        options:
+            - { name: ignore-load-errors, value: true }
+            - { name: lowquality, value: false }
+    image:
+        enabled:    true
+        binary:     %kernel.root_dir%/Resources/java/wkhtmltoimage
+        options:    []
+
+knp_paginator:
+    template:
+        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
+
+stfalcon_tinymce:
+    include_jquery: false
+    tinymce_jquery: false
+    textarea_class: 'tinymce'
+    language: %locale%
+    theme:
+        simple:
+            plugins:
+               - "advlist autolink lists link image charmap print preview hr anchor pagebreak"
+               - "searchreplace wordcount visualblocks visualchars code fullscreen"
+               - "insertdatetime media nonbreaking save table contextmenu directionality"
+               - "emoticons template paste textcolor"
+            menubar: false
+            height: "400px"
+
+sonata_media:
+    default_context: default
+    db_driver: doctrine_orm
+    contexts:
+        default:
+            providers:
+                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+            formats:
+                small: { width: 100 , quality: 70}
+                big:   { width: 500 , quality: 70}
+    cdn:
+        server:
+            path: /uploads/media
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     true
+    class:
+        media: Endroid\Bundle\MediaBundle\Entity\Media
+        gallery: Endroid\Bundle\MediaBundle\Entity\Gallery
+        gallery_has_media: Endroid\Bundle\MediaBundle\Entity\GalleryHasMedia
+
+jms_i18n_routing:
+    default_locale: %locale%
+    locales: %locales%
+    strategy: prefix_except_default

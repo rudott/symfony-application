@@ -1,2 +1,21 @@
-symfony-application
-===================
+Endroid Symfony Application
+===========================
+
+Installation
+------------
+
+    mkdir app/cache app/logs web/uploads
+
+    sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs web/uploads
+    sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx app/cache app/logs web/uploads
+
+    (configure parameters.yml)
+
+    curl -s http://getcomposer.org/installer | php
+    php composer.phar install
+
+    php app/console doctrine:database:create
+    php app/console doctrine:schema:update --force
+    php app/console doctrine:fixtures:load -n
+    php app/console assets:install --symlink
+    php app/console fos:elastica:populate

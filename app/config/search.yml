@@ -1,0 +1,34 @@
+fos_elastica:
+    clients:
+        default: { host: localhost, port: 9200 }
+    indexes:
+        website:
+            client: default
+            finder: ~
+            types:
+                page:
+                    mappings:
+                        title: { boost: 3 }
+                        content: { boost: 2 }
+                        locale: ~
+                        published: ~
+                        slug: ~
+                    persistence:
+                        driver: orm
+                        model: Endroid\Bundle\PageBundle\Entity\Page
+                        provider: ~
+                        finder: ~
+                        listener: ~
+                newsarticle:
+                    mappings:
+                        title: { boost: 3 }
+                        content: { boost: 2 }
+                        locale: ~
+                        published: ~
+                        slug: ~
+                    persistence:
+                        driver: orm
+                        model: Endroid\Bundle\NewsBundle\Entity\Article
+                        provider: ~
+                        finder: ~
+                        listener: ~
