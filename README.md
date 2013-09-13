@@ -1,6 +1,12 @@
 Endroid Symfony Application
 ===========================
 
+Demo
+----
+
+[`symfony-application.endroid.nl`](http://symfony-application.endroid.nl/)
+[`symfony-application.endroid.nl/admin/dashboard`](http://symfony-application.endroid.nl/admin/dashboard/) (admin/admin)
+
 Installation
 ------------
 
