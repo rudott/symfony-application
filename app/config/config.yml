@@ -95,7 +95,7 @@ sonata_user:
         group: Endroid\Bundle\UserBundle\Entity\Group
 
 sonata_admin:
-    title: Symfony Standard
+    title: Symfony Application
     title_logo: /bundles/endroidadmin/img/logo_title.png
     templates:
         layout: EndroidAdminBundle::layout.html.twig
