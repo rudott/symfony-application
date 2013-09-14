@@ -15,27 +15,16 @@ use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
-class TraversableAdminExtension extends AdminExtension implements ContainerAwareInterface
+class TranslationAdminExtension extends AdminExtension implements ContainerAwareInterface
 {
     use ContainerAwareTrait;
 
     public function alterNewInstance(AdminInterface $admin, $object)
     {
-        if ($object->getParent() == null) {
+        $translatableClass = $admin->getClass().'Translatable';
+        $translatable = new $translatableClass();
 
-            $reflectionClass = $admin->getClass();
-            $parent = $this->container->get('doctrine')->getRepository($reflectionClass)->findOneById($this->container->get('request')->query->get('parent'));
-
-            $object->setParent($parent);
-        }
-    }
-
-    public function configureFormFields(FormMapper $formMapper)
-    {
-        $formMapper
-            ->with('Traversable')
-                ->add('parent')
-            ->end()
-        ;
+        $object->setLocale($this->container->get('request')->query->get('locale'));
+        $object->setTranslatable($translatable);
     }
 }

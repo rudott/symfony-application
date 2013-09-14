@@ -29,13 +29,20 @@ services:
             - { name: doctrine.event_listener, event: prePersist, method: onPrePersist }
             - { name: doctrine.event_listener, event: preUpdate, method: onPreUpdate }
 
-    endroid_behavior.translatable.listener:
-          class: Endroid\Bundle\BehaviorBundle\EventListener\TranslatableListener
+    endroid_behavior.translation.listener:
+          class: Endroid\Bundle\BehaviorBundle\EventListener\TranslationListener
           calls:
               - [ setContainer, [ @service_container ] ]
           tags:
               - { name: doctrine.event_listener, event: loadClassMetadata , method: onLoadClassMetadata }
               - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    endroid_behavior.translation.extension:
+            class: Endroid\Bundle\BehaviorBundle\Admin\Extension\TranslationAdminExtension
+            calls:
+                - [ setContainer, [ @service_container ] ]
+            tags:
+                - { name: sonata.admin.extension }
 
     endroid_behavior.traversable.listener:
         class: Endroid\Bundle\BehaviorBundle\EventListener\TraversableListener
@@ -44,7 +51,7 @@ services:
 
     endroid_behavior.traversable.extension:
         class: Endroid\Bundle\BehaviorBundle\Admin\Extension\TraversableAdminExtension
-        tags:
-            - { name: sonata.admin.extension }
         calls:
             - [ setContainer, [ @service_container ] ]
+        tags:
+            - { name: sonata.admin.extension }

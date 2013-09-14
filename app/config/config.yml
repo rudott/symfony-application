@@ -103,6 +103,9 @@ sonata_admin:
         endroid_behavior.publishable.extension:
             implements:
                 - Endroid\Bundle\BehaviorBundle\Model\PublishableInterface
+        endroid_behavior.translation.extension:
+            implements:
+                - Endroid\Bundle\BehaviorBundle\Model\TranslationInterface
         endroid_behavior.traversable.extension:
             implements:
                 - Endroid\Bundle\BehaviorBundle\Model\TraversableInterface

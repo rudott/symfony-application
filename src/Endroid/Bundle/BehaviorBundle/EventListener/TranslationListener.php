@@ -16,7 +16,7 @@ use ReflectionClass;
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 
-class TranslatableListener extends ContainerAware
+class TranslationListener extends ContainerAware
 {
     /**
      * Sets target entity classes upon class meta data load.
