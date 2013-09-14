@@ -9,6 +9,7 @@
 
 namespace Endroid\Bundle\AdminBundle\Admin;
 
+use Endroid\Bundle\BehaviorBundle\DependencyInjection\ContainerAwareTrait;
 use ReflectionClass;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -19,12 +20,7 @@ use Sonata\AdminBundle\Route\RouteCollection;
 
 class BaseAdmin extends Admin implements ContainerAwareInterface
 {
-    protected $container;
-
-    public function setContainer(ContainerInterface $container = null)
-    {
-        $this->container = $container;
-    }
+    use ContainerAwareTrait;
 
     protected function configureListFields(ListMapper $listMapper)
     {
@@ -63,7 +59,7 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
         }
 
         if ($reflectionClass->implementsInterface('Endroid\Bundle\BehaviorBundle\Model\TranslationInterface')) {
-            $parameters['locale'] = $this->getRequest()->get('locale');
+            $parameters['locale'] = $this->getRequest()->query->get('locale', $this->container->getParameter('locale'));
         }
 
         return $parameters;

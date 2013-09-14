@@ -3,6 +3,8 @@ services:
     endroid_news.admin.article:
         class: Endroid\Bundle\NewsBundle\Admin\ArticleAdmin
         arguments: [null,  Endroid\Bundle\NewsBundle\Entity\Article, null]
+        calls:
+            - [ setContainer, [ @service_container ] ]
         tags:
             - { name: sonata.admin, manager_type: orm, group: Content, label: Nieuws }
 

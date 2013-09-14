@@ -3,6 +3,8 @@ services:
     endroid_page.admin.page:
         class: Endroid\Bundle\PageBundle\Admin\PageAdmin
         arguments: [null,  Endroid\Bundle\PageBundle\Entity\Page, null]
+        calls:
+            - [ setContainer, [ @service_container ] ]
         tags:
             - { name: sonata.admin, manager_type: orm, group: Content, label: Pagina's }
 
