@@ -53,6 +53,9 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
             $collection->add('up', $this->getRouterIdParameter().'/up');
             $collection->add('down', $this->getRouterIdParameter().'/down');
         }
+
+        // By default remove export route
+        $collection->remove('export');
     }
 
     /**
