@@ -61,7 +61,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes M. Schmitt",
+                    "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -197,7 +197,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes M. Schmitt",
+                    "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -269,7 +269,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes M. Schmitt",
+                    "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -292,12 +292,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "adca0ae9f1a001fecb8ede6f84ea774d31ebc895"
+                "reference": "b1e7d5a991ca891cd66c143a618f5ce1e679ba9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/adca0ae9f1a001fecb8ede6f84ea774d31ebc895",
-                "reference": "adca0ae9f1a001fecb8ede6f84ea774d31ebc895",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/b1e7d5a991ca891cd66c143a618f5ce1e679ba9f",
+                "reference": "b1e7d5a991ca891cd66c143a618f5ce1e679ba9f",
                 "shasum": ""
             },
             "require": {
@@ -339,7 +339,7 @@
             "keywords": [
                 "database"
             ],
-            "time": "2013-09-13 02:48:05"
+            "time": "2013-09-16 23:31:59"
         },
         {
             "name": "doctrine/dbal",
@@ -478,17 +478,17 @@
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
-            "version": "v2.2.0",
+            "version": "dev-master",
             "target-dir": "Doctrine/Bundle/FixturesBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "c811f96f0cf83b997e3a3ed037cac729bbe3e803"
+                "reference": "3caec4826e58fe47520b591f965b4adcdfc8a6c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/c811f96f0cf83b997e3a3ed037cac729bbe3e803",
-                "reference": "c811f96f0cf83b997e3a3ed037cac729bbe3e803",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/3caec4826e58fe47520b591f965b4adcdfc8a6c8",
+                "reference": "3caec4826e58fe47520b591f965b4adcdfc8a6c8",
                 "shasum": ""
             },
             "require": {
@@ -500,7 +500,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "2.2.x-dev"
                 }
             },
             "autoload": {
@@ -532,7 +532,7 @@
                 "Fixture",
                 "persistence"
             ],
-            "time": "2013-09-05 11:23:37"
+            "time": "2013-09-16 10:15:05"
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
@@ -689,7 +689,7 @@
                     "email": "roman@code-factory.org"
                 },
                 {
-                    "name": "Johannes M. Schmitt",
+                    "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -1731,7 +1731,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -2643,12 +2643,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "e34a068f2cf6e87b427cf30c8d628a477842a6f1"
+                "reference": "aca5aef3ed86797b15ac8f83d77cc90a803719ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/e34a068f2cf6e87b427cf30c8d628a477842a6f1",
-                "reference": "e34a068f2cf6e87b427cf30c8d628a477842a6f1",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/aca5aef3ed86797b15ac8f83d77cc90a803719ec",
+                "reference": "aca5aef3ed86797b15ac8f83d77cc90a803719ec",
                 "shasum": ""
             },
             "require": {
@@ -2712,7 +2712,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-09-14 16:47:02"
+            "time": "2013-09-17 12:18:26"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -3094,12 +3094,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataMediaBundle.git",
-                "reference": "f5260299560e9c0aaff998c544a9596b91e9d220"
+                "reference": "6a9a634870af18982efcc8abee76776138f9331d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/f5260299560e9c0aaff998c544a9596b91e9d220",
-                "reference": "f5260299560e9c0aaff998c544a9596b91e9d220",
+                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/6a9a634870af18982efcc8abee76776138f9331d",
+                "reference": "6a9a634870af18982efcc8abee76776138f9331d",
                 "shasum": ""
             },
             "require": {
@@ -3161,7 +3161,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2013-09-14 14:43:00"
+            "time": "2013-09-17 16:57:00"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -3237,12 +3237,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "c9f78633bb2e02556b80277756943fc25b34ab41"
+                "reference": "9ba7aa586218314afec05e34abf0c2621bd80cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/c9f78633bb2e02556b80277756943fc25b34ab41",
-                "reference": "c9f78633bb2e02556b80277756943fc25b34ab41",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/9ba7aa586218314afec05e34abf0c2621bd80cc3",
+                "reference": "9ba7aa586218314afec05e34abf0c2621bd80cc3",
                 "shasum": ""
             },
             "require": {
@@ -3294,21 +3294,21 @@
                 "sonata",
                 "user"
             ],
-            "time": "2013-09-14 14:43:41"
+            "time": "2013-09-15 18:56:01"
         },
         {
             "name": "stfalcon/tinymce-bundle",
-            "version": "v0.3.0",
+            "version": "v0.3.1",
             "target-dir": "Stfalcon/Bundle/TinymceBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stfalcon/TinymceBundle.git",
-                "reference": "a098beeb74c65e26a0179640721354383943cb00"
+                "reference": "cd00aa03c1d47067cf64216e3ecfa2605deab191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stfalcon/TinymceBundle/zipball/a098beeb74c65e26a0179640721354383943cb00",
-                "reference": "a098beeb74c65e26a0179640721354383943cb00",
+                "url": "https://api.github.com/repos/stfalcon/TinymceBundle/zipball/cd00aa03c1d47067cf64216e3ecfa2605deab191",
+                "reference": "cd00aa03c1d47067cf64216e3ecfa2605deab191",
                 "shasum": ""
             },
             "require": {
@@ -3352,7 +3352,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2013-07-30 07:59:56"
+            "time": "2013-09-16 06:40:50"
         },
         {
             "name": "swiftmailer/swiftmailer",
