@@ -25,3 +25,10 @@ Installation
     php app/console doctrine:fixtures:load -n
     php app/console assets:install --symlink
     php app/console fos:elastica:populate
+
+ElasticSearch
+-------------
+
+In case you want to use ElasticSearch as your search engine, make sure the
+search engine is installed and running. For more information on installing
+ElasticSearch read the [`installation guide`](http://www.elasticsearch.org/guide/reference/setup/installation/).
