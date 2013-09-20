@@ -9,6 +9,7 @@
 
 namespace Endroid\Bundle\NewsBundle\Admin;
 
+use Endroid\Bundle\NewsBundle\Entity\ArticleTranslatable;
 use Endroid\Bundle\AdminBundle\Admin\BaseAdmin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -22,6 +23,15 @@ class ArticleAdmin extends BaseAdmin
 
     protected function configureFormFields(FormMapper $formMapper)
     {
+        parent::configureFormFields($formMapper);
+
+        $subject = $this->getSubject();
+
+        $translatable = $subject->getTranslatable();
+        if ($translatable->getDate() === null) {
+            $translatable->setDate(new \DateTime());
+        }
+
         $formMapper
             ->with('General')
                 ->add('title')
@@ -39,6 +49,8 @@ class ArticleAdmin extends BaseAdmin
 
     protected function configureListFields(ListMapper $listMapper)
     {
+        parent::configureListFields($listMapper);
+
         $listMapper
             ->addIdentifier('title')
             ->add('translatable.date')

@@ -90,8 +90,8 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
     /**
      * Create the query used to retrieve the list.
      *
-     * @param $context
-     * @return $query
+     * @param string $context
+     * @return \Sonata\AdminBundle\Datagrid\ProxyQueryInterface
      */
     public function createQuery($context = 'list')
     {
@@ -103,6 +103,12 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
         if ($reflectionClass->implementsInterface('Endroid\Bundle\BehaviorBundle\Model\TraversableInterface')) {
             $parentId = intval($this->container->get('request')->query->get('parent', 0));
             $query->andWhere($query->getRootAlias().'.parent '.($parentId ? '= '.$parentId : 'IS NULL'));
+        }
+
+        // Filter the translatable list by query string parent
+        if ($reflectionClass->implementsInterface('Endroid\Bundle\BehaviorBundle\Model\TranslationInterface')) {
+            $locale = $this->container->get('request')->query->get('locale', $this->container->getParameter('locale'));
+            $query->andWhere($query->getRootAlias().'.locale = \''.$locale.'\'');
         }
 
         return $query;

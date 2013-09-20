@@ -93,4 +93,14 @@ class ArticleTranslatable implements TranslatableInterface
     {
         return $this->image;
     }
+
+    /**
+     * Returns the string representation.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return strval($this->id);
+    }
 }

@@ -9,7 +9,6 @@
 
 namespace Endroid\Bundle\BehaviorBundle\Admin\Extension;
 
-use Doctrine\ORM\EntityManager;
 use Endroid\Bundle\BehaviorBundle\DependencyInjection\ContainerAwareTrait;
 use Endroid\Bundle\BehaviorBundle\Model\TranslationInterface;
 use Sonata\AdminBundle\Admin\AdminExtension;
@@ -21,6 +20,26 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 class TranslationAdminExtension extends AdminExtension implements ContainerAwareInterface
 {
     use ContainerAwareTrait;
+
+    /**
+     * Configure form fields.
+     *
+     * @param FormMapper $formMapper
+     */
+    public function configureFormFields(FormMapper $formMapper)
+    {
+        $subject = $formMapper->getAdmin()->getSubject();
+        $translatable = $subject->getTranslatable();
+
+        $formMapper
+            ->with('General')
+                ->add('translatable', 'hidden', array(
+                    'data' => $translatable->getId(),
+                    'mapped' => false
+                ))
+            ->end()
+        ;
+    }
 
     /**
      * Configure list fields.
@@ -45,15 +64,25 @@ class TranslationAdminExtension extends AdminExtension implements ContainerAware
      */
     public function alterNewInstance(AdminInterface $admin, $object)
     {
-        $translatableClass = $admin->getClass().'Translatable';
-        $translatableId = $this->container->get('request')->query->get('translatable');
-        if ($translatableId) {
-            $translatable = $this->container->get('doctrine')->getRepository($translatableClass)->findOneById($translatableId);
-        } else {
-            $translatable = new $translatableClass();
+        if ($object->getLocale() === null) {
+            $object->setLocale($this->container->get('request')->query->get('locale'));
         }
 
-        $object->setLocale($this->container->get('request')->query->get('locale'));
-        $object->setTranslatable($translatable);
+        $translatable = $object->getTranslatable();
+        if ($translatable === null) {
+            $translatableClass = get_class($object).'Translatable';
+            $uniqid = $this->container->get('request')->query->get('uniqid');
+            if ($uniqid === null) {
+                $translatableId = $this->container->get('request')->query->get('translatable');
+            } else {
+                $parameters = $this->container->get('request')->request->get($uniqid);
+                $translatableId = $parameters['translatable'];
+            }
+            $translatable = $this->container->get('doctrine')->getRepository($translatableClass)->findOneById($translatableId);
+            if ($translatable === null) {
+                $translatable = new $translatableClass;
+            }
+            $object->setTranslatable($translatable);
+        }
     }
 }

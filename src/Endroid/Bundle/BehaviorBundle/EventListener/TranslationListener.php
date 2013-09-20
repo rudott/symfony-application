@@ -47,10 +47,7 @@ class TranslationListener extends ContainerAware
         /** @var EntityManager $manager */
         $manager = $this->container->get('doctrine')->getManager();
 
-        if (strpos($this->container->get('request')->getPathInfo(), '/admin') === 0) {
-            $filter = $manager->getFilters()->enable('translation');
-            $filter->setParameter('locale', $this->container->get('request')->get('locale', $this->container->getParameter('locale')));
-        } else {
+        if (strpos($this->container->get('request')->getPathInfo(), '/admin') !== 0) {
             $filter = $manager->getFilters()->enable('translation');
             $filter->setParameter('locale', $this->container->get('request')->getLocale());
         }
