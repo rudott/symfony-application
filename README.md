@@ -7,16 +7,19 @@ Use this project if you want to quickly set up a basis for your web application.
 is built on [`endroid/symfony-standard`](https://github.com/symfony/symfony-standard) and extended
 with popular and well-maintained community bundles and some example implementations to speed up the
 development process. You decide which functionalities you use, depending on the type of web
-application you are building. Browse the [`live demo`](http://symfony-application.endroid.nl/) to
-get a quick impression of the full package.
+application you are building. Browse the [`live demo`](http://symfony-application.endroid.nl/) and
+the [`admin section`](http://symfony-application.endroid.nl/admin/dashboard) (admin/admin)
+to get a quick impression of the full package.
 
 ## Features
 
   * Front end
   * CMS
     * Users
+    * Media
     * Pages
     * News
+    * Forms
     * Sitemap
     * Menu's
   * Behaviors
