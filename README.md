@@ -11,6 +11,11 @@ application you are building. Browse the [`live demo`](http://symfony-applicatio
 the [`admin section`](http://symfony-application.endroid.nl/admin/dashboard) (admin/admin)
 to get a quick impression of the full package.
 
+## Live demo
+
+  * Front end - [`symfony-application.endroid.nl`](http://symfony-application.endroid.nl/)
+  * Admin - [`symfony-application.endroid.nl/admin/dashboard`](http://symfony-application.endroid.nl/admin/dashboard) (admin/admin)
+
 ## Features
 
   * Front end
@@ -31,11 +36,6 @@ to get a quick impression of the full package.
     * Traversable
   * Multilanguage
   * Search
-
-## Live demo
-
-  * Front end - [`symfony-application.endroid.nl`](http://symfony-application.endroid.nl/)
-  * Admin - [`symfony-application.endroid.nl/admin/dashboard`](http://symfony-application.endroid.nl/admin/dashboard) (admin/admin)
 
 ## Installation
 
