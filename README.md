@@ -70,5 +70,5 @@ to get a quick impression of the full package.
 
 ## Note
 
-Please note that if you are using PHP < 5.4 you have to copy the trait code into your entities
-instead of using the traits.
+Please note that if you are using PHP < 5.4 and you want to make use of the provided behaviors
+you will have to copy the trait code into your entities instead of using the traits.
