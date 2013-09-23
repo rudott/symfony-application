@@ -43,7 +43,7 @@ class Article implements PublishableInterface, SluggableInterface, Timestampable
     protected $title;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     protected $content;
 

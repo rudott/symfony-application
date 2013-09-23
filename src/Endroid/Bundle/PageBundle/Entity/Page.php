@@ -44,7 +44,7 @@ class Page implements PublishableInterface, SluggableInterface, TimestampableInt
     protected $title;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     protected $content;
 
