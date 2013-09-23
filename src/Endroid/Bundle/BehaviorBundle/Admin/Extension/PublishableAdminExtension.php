@@ -27,7 +27,10 @@ class PublishableAdminExtension extends AdminExtension
     public function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('published', null, array('label' => 'admin.behavior.publishable.published'))
+            ->add('published', null, array(
+                'label' => 'admin.behavior.publishable.published',
+                'editable' => true
+            ))
         ;
     }
 }
