@@ -23,7 +23,7 @@ class LoadNewsData extends AbstractFixture
         $date = new DateTime('now');
         $interval = new DateInterval('P1D');
 
-        for ($n = 1; $n <= 5; $n++) {
+        for ($n = 1; $n <= 10; $n++) {
 
             $articleTranslatable = new ArticleTranslatable();
             $articleTranslatable->setDate($date);

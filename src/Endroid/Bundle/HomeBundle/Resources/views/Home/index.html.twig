@@ -2,30 +2,42 @@
 
 {% block content %}
 
-    <div class="jumbotron">
-        <h1>Symfony Application</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-    </div>
+    {% if app.request.locale == 'en' %}
 
-    <div class="body-content">
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        <div class="jumbotron">
+            <h1>Symfony Application</h1>
+            <p>Whether you are building a simple website, a complex application or an API, this project helps you to get started quickly. The application is built on <a href="https://github.com/symfony/symfony-standard" target="_blank">symfony-standard</a> and extended with some of the most popular, stable and well maintained libraries to get you up and running in no time. You can play around on this website to see what is provided out-of-the-box or view the <a href="http://www.slideshare.net/jeroenvandenenden9/endroidsymfonyapplication" target="_blank">presentation</a> to learn more.</p>
+            <p><a class="btn btn-primary btn-large" target="_blank" href="https://github.com/endroid/symfony-application">Learn more &raquo;</a></p>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>Content Management</h2>
+                    <p>By default the project includes an admin section built on <a href="https://github.com/sonata-project/SonataDoctrineORMAdminBundle" target="_blank">SonataDoctrineORMAdminBundle</a>. While this bundle does a great job at simple ORM based content management and provides many out-of-the-box features, it will not suffice in case more customized or complex content management is required.</p>
+                    <p><a class="btn btn-default" href="https://github.com/endroid/symfony-application" target="_blank">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <h2>Search and index</h2>
+                    <p>By default the installation comes with an ElasticSearch implementation provided by <a href="https://github.com/FriendsOfSymfony/FOSElasticaBundle" target="_blank">FOSElasticaBundle</a>. Implementation is quick and simple and in most cases comes down to defining your indexes in the search config and tweaking the provided search script. Of course, more complex indexing and searching (i.e. faceted search) are at hand.</p>
+                    <p><a class="btn btn-default" href="https://github.com/endroid/symfony-application" target="_blank">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <h2>Internationalization</h2>
+                    <p>The included <a href="https://github.com/schmittjoh/JMSI18nRoutingBundle" target="_blank">JMSI18nRoutingBundle</a> enables language switching based on domain or prefix and enables translation of routes. Also, behaviors are provided to further ease the definition of multilingual entities.</p>
+                    <p><a class="btn btn-default" href="https://github.com/endroid/symfony-application" target="_blank">View details &raquo;</a></p>
+                </div>
             </div>
         </div>
-    </div>
+
+    {% elseif app.request.locale == 'nl' %}
+
+        <div class="jumbotron">
+            <h1>Symfony Application</h1>
+            <p>Welkom op de Nederlandstalige website.</p>
+            <p><a class="btn btn-primary btn-large" target="_blank" href="https://github.com/endroid/symfony-application">Lees meer &raquo;</a></p>
+        </div>
+
+    {% endif %}
 
 {% endblock content %}
