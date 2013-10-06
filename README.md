@@ -39,28 +39,18 @@ to get a quick impression of the full package.
 
 ## Installation
 
-### Create your personal parameters.yml file
+## Create the project
 
-    cp app/config/parameters.yml.dist app/config/parameters.yml
-
-### Create directories with proper access
-
-    mkdir app/cache app/logs web/uploads
-
-    sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs web/uploads
-    sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx app/cache app/logs web/uploads
-
-### Install dependencies
-
-    curl -s http://getcomposer.org/installer | php
-    php composer.phar install
+    composer create-project endroid/symfony-application <target>
 
 ### Create the database and schema
 
     php app/console doctrine:database:create
     php app/console doctrine:schema:update --force
 
-### [`Install ElasticSearch (optional)`](http://www.elasticsearch.org/guide/reference/setup/installation/)
+### Install ElasticSearch (optional)
+
+See http://www.elasticsearch.org/guide/reference/setup/installation/ for more information.
 
 ### Load fixtures (optional)
 
