@@ -39,7 +39,7 @@ to get a quick impression of the full package.
 
 ## Installation
 
-## Create the project
+### Create the project
 
     composer create-project endroid/symfony-application <target>
 
