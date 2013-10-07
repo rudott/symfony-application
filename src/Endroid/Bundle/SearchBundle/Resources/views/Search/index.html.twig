@@ -1,5 +1,9 @@
 {% extends 'EndroidSiteBundle::layout.html.twig' %}
 
+{% block title %}
+    {{ 'search'|trans }} - {{ parent() }}
+{% endblock %}
+
 {% block content %}
 
     <h1>{{ 'search_results'|trans }}</h1>

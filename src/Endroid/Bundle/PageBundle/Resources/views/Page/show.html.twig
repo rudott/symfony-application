@@ -1,5 +1,9 @@
 {% extends 'EndroidSiteBundle::layout.html.twig' %}
 
+{% block title %}
+    {{ page.title|trans }} - {{ parent() }}
+{% endblock %}
+
 {% block language_selector %}
     {% for locale in locales %}
         <a href="{{ path('endroid_page_page_show', { slug: page.translatable.translation(locale).slug, _locale: locale }) }}"><img src="{{ asset('bundles/endroidsite/img/flag_' ~ locale ~ '.png') }}" width="35" /></a>

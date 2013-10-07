@@ -1,4 +1,8 @@
-{% extends 'EndroidSiteBundle::layout.html.twig' %}
+{% extends 'EndroidNewsBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ article.title|trans }} - {{ parent() }}
+{% endblock %}
 
 {% block language_selector %}
     {% for locale in locales %}
