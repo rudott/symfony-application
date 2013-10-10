@@ -46,6 +46,6 @@ trait SluggableTrait
      */
     public function getSluggable()
     {
-        return $this;
+        return strval($this);
     }
 }
