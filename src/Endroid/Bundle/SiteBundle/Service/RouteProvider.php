@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\HomeBundle\Service;
+namespace Endroid\Bundle\SiteBundle\Service;
 
 use Endroid\Bundle\RouteBundle\Entity\Route;
 use Endroid\Bundle\RouteBundle\Service\RouteProviderInterface;
@@ -21,9 +21,9 @@ class RouteProvider extends ContainerAware implements RouteProviderInterface
 
         $routeHome = new Route();
         $routeHome->setLabel('Home');
-        $routeHome->setKey('endroid_home_home_index');
-        $routeHome->setName('endroid_home_home_index');
-        $routes['endroid_home_home_index'] = $routeHome;
+        $routeHome->setKey('endroid_site_home_index');
+        $routeHome->setName('endroid_site_home_index');
+        $routes['endroid_site_home_index'] = $routeHome;
 
         return $routes;
     }

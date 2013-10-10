@@ -1,10 +1,6 @@
 # Translations of prefixes for multilingual routes can be defined in
 # src/Endroid/Bundle/SiteBundle/Resources/translations/routes.<lang>.yml
 
-endroid_home:
-    resource:   "@EndroidHomeBundle/Controller/"
-    type:       annotation
-
 endroid_news:
     resource:   "@EndroidNewsBundle/Controller/"
     type:       annotation
@@ -14,6 +10,10 @@ endroid_search:
     resource:   "@EndroidSearchBundle/Controller/"
     type:       annotation
     prefix:     /search
+
+endroid_site:
+    resource:   "@EndroidSiteBundle/Controller/"
+    type:       annotation
 
 endroid_sitemap:
     resource:   "@EndroidSitemapBundle/Controller/"

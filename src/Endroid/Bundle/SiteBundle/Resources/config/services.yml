@@ -1,6 +1,6 @@
 services:
 
-    endroid_home.route_provider:
-        class: Endroid\Bundle\HomeBundle\Service\RouteProvider
+    endroid_site.route_provider:
+        class: Endroid\Bundle\SiteBundle\Service\RouteProvider
         tags:
             -  { name: endroid_route.provider }

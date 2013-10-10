@@ -40,7 +40,6 @@ class AppKernel extends Kernel
             // Project specific bundles
             new Endroid\Bundle\AdminBundle\EndroidAdminBundle(),
             new Endroid\Bundle\BehaviorBundle\EndroidBehaviorBundle(),
-            new Endroid\Bundle\HomeBundle\EndroidHomeBundle(),
             new Endroid\Bundle\MediaBundle\EndroidMediaBundle(),
             new Endroid\Bundle\MenuBundle\EndroidMenuBundle(),
             new Endroid\Bundle\NewsBundle\EndroidNewsBundle(),
