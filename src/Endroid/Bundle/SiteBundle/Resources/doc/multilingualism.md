@@ -64,13 +64,13 @@ Using these entities you can now create your first translations like this.
 $pageTranslatable = new PageTranslatable();
 
 $page = new Page();
-$page->setLocale(‘en’);
-$page->setTitle(‘About us’);
+$page->setLocale("en");
+$page->setTitle("About us");
 $pageTranslatable->addTranslation($page);
 
 $page = new Page();
-$page->setLocale(‘nl’);
-$page->setTitle(‘Over ons’);
+$page->setLocale("nl");
+$page->setTitle("Over ons");
 $pageTranslatable->addTranslation($page);
 ```
 
@@ -117,7 +117,7 @@ enable switching between multilingual entities.
 
 {% block language_selector %}
     {% for locale in locales %}
-        <a href="{{ path('endroid_page_page_show', { slug: page.translatable.translation(locale).slug, _locale: locale }) }}"><img src="{{ asset('bundles/endroidsite/img/flag_' ~ locale ~ '.png') }}" width="35" height=”20” /></a>
+        <a href="{{ path('endroid_page_page_show', { slug: page.translatable.translation(locale).slug, _locale: locale }) }}"><img src="{{ asset('bundles/endroidsite/img/flag_' ~ locale ~ '.png') }}" width="35" height="20" /></a>
     {% endfor %}
 {% endblock %}
 ```
