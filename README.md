@@ -62,3 +62,9 @@ See http://www.elasticsearch.org/guide/reference/setup/installation/ for more in
 
 Please note that if you are using PHP < 5.4 and you want to make use of the provided behaviors
 you will have to copy the trait code into your entities instead of using the traits.
+
+## Documentation
+
+The documentation is stored in the `src/Endroid/Bundle/SiteBundle/Resources/doc/index.md` file in this bundle.
+
+[Read the Documentation](https://github.com/endroid/symfony-application/tree/master/src/Endroid/Bundle/SiteBundle/Resources/doc/index.md)
