@@ -28,7 +28,7 @@
         "sonata-project/media-bundle": "~2.2@dev",
         "sonata-project/user-bundle": "~2.2@dev",
         "elnur/blowfish-password-encoder-bundle": "dev-master",
-        "raulfraile/ladybug-bundle": "~0.7",
+        "raulfraile/ladybug-bundle": "~1.0",
         "netvlies/form-bundle": "~1.0",
         "phpexcel/phpexcel": "~1.7",
         "phpword/phpword": "dev-master",

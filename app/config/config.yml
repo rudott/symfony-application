@@ -170,3 +170,6 @@ jms_i18n_routing:
     default_locale: %locale%
     locales: %locales%
     strategy: prefix_except_default
+
+raul_fraile_ladybug:
+    theme: modern
