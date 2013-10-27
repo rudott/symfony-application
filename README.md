@@ -18,15 +18,8 @@ to get a quick impression of the full package.
 
 ## Features
 
-  * Front end
-  * CMS
-    * Users
-    * Media
-    * Pages
-    * News
-    * Forms
-    * Sitemap
-    * Menu's
+  * Base layout - Twitter Bootstrap 3
+  * Admin
   * Behaviors
     * Publishable
     * Sluggable
@@ -36,6 +29,13 @@ to get a quick impression of the full package.
     * Traversable
   * Multilanguage
   * Search
+  * Menu's
+  * Users
+  * Pages
+  * News
+  * Media
+  * Forms
+  * Sitemap
 
 ## Installation
 
@@ -66,5 +66,4 @@ you will have to copy the trait code into your entities instead of using the tra
 ## Documentation
 
 The documentation is stored in the `src/Endroid/Bundle/SiteBundle/Resources/doc/index.md` file in this bundle.
-
 [Read the Documentation](https://github.com/endroid/symfony-application/tree/master/src/Endroid/Bundle/SiteBundle/Resources/doc/index.md)

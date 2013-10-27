@@ -37,7 +37,9 @@
         "friendsofsymfony/elastica-bundle": "~2.1",
         "knplabs/knp-paginator-bundle": "~2.3",
         "jms/i18n-routing-bundle": "~1.0",
-        "gedmo/doctrine-extensions": "~2.3"
+        "gedmo/doctrine-extensions": "~2.3",
+        "fp/lightopenid": "dev-master",
+        "fp/openid-bundle": "~2.0"
     },
     "scripts": {
         "post-install-cmd": [

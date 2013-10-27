@@ -129,7 +129,6 @@ knp_paginator:
 stfalcon_tinymce:
     include_jquery: false
     tinymce_jquery: false
-    textarea_class: 'tinymce'
     language: %locale%
     theme:
         simple:

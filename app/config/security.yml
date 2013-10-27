@@ -3,8 +3,8 @@ security:
         connection: default
 
     encoders:
-#        FOS\UserBundle\Model\UserInterface:
-#            id: security.encoder.blowfish
+        FOS\UserBundle\Model\UserInterface:
+            id: security.encoder.blowfish
         Endroid\Bundle\UserBundle\Entity\User:
             id: security.encoder.blowfish
 
@@ -19,15 +19,24 @@ security:
                     user:  { password: userpass, roles: [ 'ROLE_USER' ] }
                     admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
         fos_userbundle:
-            id: fos_user.user_manager
+            id: endroid_user.user_manager
 
     firewalls:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        admin:
-            pattern:            /admin(.*)
+        main:
+            fp_openid:
+                login_path: /admin/login
+                check_path: /admin/login_check_openid
+                create_user_if_not_exists: true
+                provider: fos_userbundle
+                always_use_default_target_path: false
+                default_target_path: /admin/dashboard
+                required_attributes: [ contact/email, namePerson/last, namePerson/first ]
+                optional_attributes: [ ]
+            pattern:            .*
             context:            user
             form_login:
                 provider:       fos_userbundle
@@ -37,18 +46,7 @@ security:
                 failure_path:   null
             logout:
                 path:           /admin/logout
-            anonymous:          true
-
-        main:
-            pattern:            .*
-            context:            user
-            form_login:
-                provider:       fos_userbundle
-                login_path:     /login
-                use_forward:    false
-                check_path:     /login_check
-                failure_path:   null
-            logout:             true
+                target:         /admin/login
             anonymous:          true
 
     access_control:

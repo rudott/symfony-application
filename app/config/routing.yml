@@ -27,6 +27,10 @@ sonata_user:
     resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
     prefix: /admin
 
+fp_openid_security_check:
+    pattern: /admin/login_check_openid
+    defaults: { _controller: FpOpenIdBundle:Security:check }
+
 gallery:
     resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
     prefix: /media/gallery
