@@ -33,7 +33,7 @@
 
         <div class="form-actions">
             <input type="submit" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
-            <a href="#" onclick="$('#fp_openid_login').submit();" title="Login using Google OpenID"><img src="{{ asset('bundles/endroiduser/img/google.png') }}" style="float: right;" /></a>
+            <span style="float: right; line-height: 10px;">Login with Google&nbsp;&nbsp;<a href="#" onclick="$('#fp_openid_login').submit();" title="Login"><img src="{{ asset('bundles/endroiduser/img/google.png') }}" /></a></span>
         </div>
     </form>
 
