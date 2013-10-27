@@ -18,8 +18,14 @@ to get a quick impression of the full package.
 
 ## Features
 
-  * Base layout - Twitter Bootstrap 3
+  * Base layout
+    * Twitter Bootstrap 3
+    * Multilanguage support
   * Admin
+    * User management
+    * Google OpenID login
+    * Multilanguage support
+    * Admins: menus, pages, news, media, forms
   * Behaviors
     * Publishable
     * Sluggable
@@ -27,15 +33,11 @@ to get a quick impression of the full package.
     * Timestampable
     * Translatable
     * Traversable
-  * Multilanguage
-  * Search
-  * Menu's
-  * Users
-  * Pages
-  * News
-  * Media
-  * Forms
-  * Sitemap
+  * Search engine
+    * ElasticSearch
+  * Demo functionality
+    * Pages, news, contact form
+  * Sitemap HTML and XML
 
 ## Installation
 
