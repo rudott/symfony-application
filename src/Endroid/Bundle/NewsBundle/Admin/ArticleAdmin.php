@@ -9,7 +9,6 @@
 
 namespace Endroid\Bundle\NewsBundle\Admin;
 
-use Endroid\Bundle\NewsBundle\Entity\ArticleTranslatable;
 use Endroid\Bundle\AdminBundle\Admin\BaseAdmin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;

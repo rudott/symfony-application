@@ -13,7 +13,6 @@ use Endroid\Bundle\BehaviorBundle\DependencyInjection\ContainerAwareTrait;
 use ReflectionClass;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
-use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
@@ -90,7 +89,7 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
     /**
      * Create the query used to retrieve the list.
      *
-     * @param string $context
+     * @param  string                                           $context
      * @return \Sonata\AdminBundle\Datagrid\ProxyQueryInterface
      */
     public function createQuery($context = 'list')

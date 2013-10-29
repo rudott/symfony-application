@@ -59,7 +59,7 @@ class TranslationAdminExtension extends AdminExtension implements ContainerAware
     /**
      * Handles new instance creation.
      *
-     * @param AdminInterface $admin
+     * @param AdminInterface       $admin
      * @param TranslationInterface $object
      */
     public function alterNewInstance(AdminInterface $admin, $object)

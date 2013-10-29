@@ -14,7 +14,6 @@ use Endroid\Bundle\UserBundle\Entity\User;
 use FOS\UserBundle\Entity\UserManager as FOSUserManager;
 use Fp\OpenIdBundle\Security\Core\User\UserManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 class UserManager extends FOSUserManager implements UserManagerInterface, ContainerAwareInterface
@@ -24,8 +23,8 @@ class UserManager extends FOSUserManager implements UserManagerInterface, Contai
     /**
      * Creates a new user from the OpenID login.
      *
-     * @param string $identity
-     * @param array $attributes
+     * @param  string        $identity
+     * @param  array         $attributes
      * @return UserInterface
      */
     public function createUserFromIdentity($identity, array $attributes = array())
