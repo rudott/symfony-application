@@ -6,7 +6,7 @@ services:
         calls:
             - [ setContainer, [ @service_container ] ]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: Navigatie, label: Menu's }
+            - { name: sonata.admin, manager_type: orm, group: Navigatie, label: Menus }
 
     endroid_menu.twig.extension:
         class: Endroid\Bundle\MenuBundle\Twig\Extension\MenuExtension

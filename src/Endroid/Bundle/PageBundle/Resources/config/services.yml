@@ -6,7 +6,7 @@ services:
         calls:
             - [ setContainer, [ @service_container ] ]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: Content, label: Pagina's }
+            - { name: sonata.admin, manager_type: orm, group: Content, label: Pages }
 
     endroid_page.route_provider:
         class: Endroid\Bundle\PageBundle\Service\RouteProvider

@@ -6,7 +6,7 @@ services:
         calls:
             - [ setContainer, [ @service_container ] ]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: Content, label: Nieuws }
+            - { name: sonata.admin, manager_type: orm, group: Content, label: News }
 
     endroid_news.route_provider:
         class: Endroid\Bundle\NewsBundle\Service\RouteProvider
