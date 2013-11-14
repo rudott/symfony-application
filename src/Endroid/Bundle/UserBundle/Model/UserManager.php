@@ -12,6 +12,7 @@ namespace Endroid\Bundle\UserBundle\Model;
 use Endroid\Bundle\BehaviorBundle\DependencyInjection\ContainerAwareTrait;
 use Endroid\Bundle\UserBundle\Entity\User;
 use FOS\UserBundle\Entity\UserManager as FOSUserManager;
+use FOS\UserBundle\Util\TokenGenerator;
 use Fp\OpenIdBundle\Security\Core\User\UserManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -40,14 +41,17 @@ class UserManager extends FOSUserManager implements UserManagerInterface, Contai
         $user->setEmail($attributes['contact/email']);
         $user->setFirstName($attributes['namePerson/first']);
         $user->setLastName($attributes['namePerson/last']);
-        $user->setPlainPassword('welkom123');
         $user->setEnabled(true);
 
-        $group = $this->em->getRepository('EndroidUserBundle:Group')->findOneByName('super-admin');
+        $group = $this->em->getRepository('EndroidUserBundle:Group')->findOneByName('admin');
         $user->addGroup($group);
 
-        $encoder = $this->container->get('security.encoder_factory')->getEncoder($user);
-        $user->setPassword($encoder->encodePassword($user->getPlainPassword(), $user->getSalt()));
+        /** @var TokenGenerator $tokenGenerator */
+        $tokenGenerator = $this->container->get('fos_user.util.token_generator');
+        $password = substr($tokenGenerator->generateToken(), 0, 8);
+        $user->setPlainPassword($password);
+
+        $this->updatePassword($user);
 
         return $user;
     }

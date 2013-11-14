@@ -13,6 +13,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Endroid\Bundle\UserBundle\Entity\User;
 use Endroid\Bundle\UserBundle\Entity\Group;
+use Endroid\Bundle\UserBundle\Model\UserManager;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -33,34 +34,33 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface
 
     public function load(ObjectManager $manager)
     {
-        $group = new Group('super-admin');
-        $group->addRole('ROLE_SUPER_ADMIN');
+        $adminGroup = new Group('admin');
+        $adminGroup->addRole('ROLE_SUPER_ADMIN');
+        $manager->persist($adminGroup);
 
-        $manager->persist($group);
+        $userGroup = new Group('client');
+        $userGroup->addRole('ROLE_ADMIN');
+        $manager->persist($userGroup);
+
+        /** @var UserManager $userManager */
+        $userManager = $this->container->get('fos_user.user_manager');
 
         $user = new User();
         $user->setUsername('admin');
         $user->setEmail('admin@admin');
-        $user->addGroup($group);
+        $user->addGroup($adminGroup);
         $user->setEnabled(true);
-        $encoder = $this->container->get('security.encoder_factory')->getEncoder($user);
-        $user->setPassword($encoder->encodePassword('admin'));
-
+        $user->setPlainPassword('admin');
+        $userManager->updatePassword($user);
         $manager->persist($user);
-
-        $group = new Group('client-admin');
-        $group->addRole('ROLE_ADMIN');
-
-        $manager->persist($group);
 
         $user = new User();
         $user->setUsername('client');
         $user->setEmail('client@client');
-        $user->addGroup($group);
+        $user->addGroup($userGroup);
         $user->setEnabled(true);
-        $encoder = $this->container->get('security.encoder_factory')->getEncoder($user);
-        $user->setPassword($encoder->encodePassword('client'));
-
+        $user->setPlainPassword('client');
+        $userManager->updatePassword($user);
         $manager->persist($user);
 
         $manager->flush();
