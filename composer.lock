@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f21dea803495c36a73b043dde6a6c94d",
+    "hash": "6ea85a19b1e4ebebbc0e81c2b51fda4c",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -720,12 +720,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "37aacdae6507faad03c3df1624e7d3a6e6c1b388"
+                "reference": "ce2ffa17a642267d48b9df6c5eba94e9d773e22f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/37aacdae6507faad03c3df1624e7d3a6e6c1b388",
-                "reference": "37aacdae6507faad03c3df1624e7d3a6e6c1b388",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/ce2ffa17a642267d48b9df6c5eba94e9d773e22f",
+                "reference": "ce2ffa17a642267d48b9df6c5eba94e9d773e22f",
                 "shasum": ""
             },
             "require": {
@@ -772,7 +772,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2013-11-10 05:33:50"
+            "time": "2013-12-03 00:28:34"
         },
         {
             "name": "doctrine/orm",
@@ -856,12 +856,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/formapro/LightOpenID.git",
-                "reference": "ad14146f9c93e90699888e150427aca431dc3c18"
+                "reference": "9bd5d5a1d893b2e2fe340b877617a5c1fa9ee807"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/formapro/LightOpenID/zipball/ad14146f9c93e90699888e150427aca431dc3c18",
-                "reference": "ad14146f9c93e90699888e150427aca431dc3c18",
+                "url": "https://api.github.com/repos/formapro/LightOpenID/zipball/9bd5d5a1d893b2e2fe340b877617a5c1fa9ee807",
+                "reference": "9bd5d5a1d893b2e2fe340b877617a5c1fa9ee807",
                 "shasum": ""
             },
             "require": {
@@ -888,25 +888,25 @@
                 "OpenId",
                 "security"
             ],
-            "time": "2012-04-04 08:39:51"
+            "time": "2013-11-28 11:46:46"
         },
         {
             "name": "fp/openid-bundle",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "target-dir": "Fp/OpenIdBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/formapro/FpOpenIdBundle.git",
-                "reference": "3f83e5dbe54e36ce49af8c081a90d9611687c210"
+                "reference": "52f8ccd83e40be67ab1ed23c413b90112a64d0fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/formapro/FpOpenIdBundle/zipball/3f83e5dbe54e36ce49af8c081a90d9611687c210",
-                "reference": "3f83e5dbe54e36ce49af8c081a90d9611687c210",
+                "url": "https://api.github.com/repos/formapro/FpOpenIdBundle/zipball/52f8ccd83e40be67ab1ed23c413b90112a64d0fc",
+                "reference": "52f8ccd83e40be67ab1ed23c413b90112a64d0fc",
                 "shasum": ""
             },
             "require": {
-                "fp/lightopenid": "dev-master",
+                "lightopenid/lightopenid": "*",
                 "php": ">=5.3.2",
                 "symfony/symfony": "~2.2"
             },
@@ -949,7 +949,7 @@
                 "OpenId",
                 "security"
             ],
-            "time": "2013-07-11 11:45:41"
+            "time": "2013-11-28 11:31:18"
         },
         {
             "name": "friendsofsymfony/elastica-bundle",
@@ -1424,16 +1424,16 @@
         },
         {
             "name": "jdorn/sql-formatter",
-            "version": "v1.2.9",
+            "version": "v1.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "v1.2.9"
+                "reference": "8859d664737492d313c34796731b35eca851b362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/v1.2.9",
-                "reference": "v1.2.9",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/8859d664737492d313c34796731b35eca851b362",
+                "reference": "8859d664737492d313c34796731b35eca851b362",
                 "shasum": ""
             },
             "require": {
@@ -1470,7 +1470,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2013-04-26 18:42:52"
+            "time": "2013-11-27 22:51:13"
         },
         {
             "name": "jms/i18n-routing-bundle",
@@ -2151,6 +2151,33 @@
                 "http client"
             ],
             "time": "2013-05-19 03:41:15"
+        },
+        {
+            "name": "lightopenid/lightopenid",
+            "version": "v0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.gitorious.org/lightopenid/lightopenid.git",
+                "reference": "9d42dc24e4dd34121c98a6491bc3ef7933a68a19"
+            },
+            "require": {
+                "php": ">=5.2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "homepage": "http://code.google.com/p/lightopenid/",
+            "keywords": [
+                "OpenId"
+            ],
+            "time": "2013-10-27 16:25:49"
         },
         {
             "name": "monolog/monolog",
@@ -2954,17 +2981,17 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "dev-master",
+            "version": "2.2.7",
             "target-dir": "Sonata/AdminBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "d02b7e0b5246556c338ba004050db4f456f06690"
+                "reference": "7d3658f1bb036ee01838e89f13265297a3e5e365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/d02b7e0b5246556c338ba004050db4f456f06690",
-                "reference": "d02b7e0b5246556c338ba004050db4f456f06690",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/7d3658f1bb036ee01838e89f13265297a3e5e365",
+                "reference": "7d3658f1bb036ee01838e89f13265297a3e5e365",
                 "shasum": ""
             },
             "require": {
@@ -3029,7 +3056,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-11-25 11:47:35"
+            "time": "2013-10-24 09:46:58"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -3143,23 +3170,23 @@
         },
         {
             "name": "sonata-project/doctrine-orm-admin-bundle",
-            "version": "dev-master",
+            "version": "2.2.4",
             "target-dir": "Sonata/DoctrineORMAdminBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "15ed873424fb30af43569014a48f6d216fdefe78"
+                "reference": "71527f81b963bcf8b274ec71ca9f7f4a41f8819e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/15ed873424fb30af43569014a48f6d216fdefe78",
-                "reference": "15ed873424fb30af43569014a48f6d216fdefe78",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/71527f81b963bcf8b274ec71ca9f7f4a41f8819e",
+                "reference": "71527f81b963bcf8b274ec71ca9f7f4a41f8819e",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "~2.3",
                 "sonata-project/admin-bundle": ">=2.2.2",
-                "symfony/symfony": "~2.2"
+                "symfony/symfony": ">=2.2,<2.4"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -3196,7 +3223,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2013-11-14 12:36:59"
+            "time": "2013-09-20 08:31:05"
         },
         {
             "name": "sonata-project/easy-extends-bundle",
@@ -3408,17 +3435,17 @@
         },
         {
             "name": "sonata-project/media-bundle",
-            "version": "dev-master",
+            "version": "2.2.5",
             "target-dir": "Sonata/MediaBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataMediaBundle.git",
-                "reference": "922258c8913e1d93ed1d7c95eb5ee5d43204963a"
+                "reference": "9cfa4817a030c139b9b5cf2f32af270c387d3fe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/922258c8913e1d93ed1d7c95eb5ee5d43204963a",
-                "reference": "922258c8913e1d93ed1d7c95eb5ee5d43204963a",
+                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/9cfa4817a030c139b9b5cf2f32af270c387d3fe5",
+                "reference": "9cfa4817a030c139b9b5cf2f32af270c387d3fe5",
                 "shasum": ""
             },
             "require": {
@@ -3428,7 +3455,7 @@
                 "sonata-project/doctrine-extensions": "1.*",
                 "sonata-project/easy-extends-bundle": "2.1.*",
                 "sonata-project/notification-bundle": "2.2.*@dev",
-                "symfony/symfony": "~2.2"
+                "symfony/symfony": ">=2.2,<2.4-dev"
             },
             "require-dev": {
                 "amazonwebservices/aws-sdk-for-php": "1.5.*",
@@ -3479,7 +3506,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2013-11-14 18:16:51"
+            "time": "2013-10-11 14:59:19"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -3551,17 +3578,17 @@
         },
         {
             "name": "sonata-project/user-bundle",
-            "version": "dev-master",
+            "version": "2.2.1",
             "target-dir": "Sonata/UserBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "d2393713fcf87438af3d474cbf90223b42c6fae6"
+                "reference": "f8dfcffd5d3f14382a539e77823dbe8287e4e650"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/d2393713fcf87438af3d474cbf90223b42c6fae6",
-                "reference": "d2393713fcf87438af3d474cbf90223b42c6fae6",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/f8dfcffd5d3f14382a539e77823dbe8287e4e650",
+                "reference": "f8dfcffd5d3f14382a539e77823dbe8287e4e650",
                 "shasum": ""
             },
             "require": {
@@ -3611,7 +3638,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2013-11-14 14:43:53"
+            "time": "2013-11-30 15:05:42"
         },
         {
             "name": "stfalcon/tinymce-bundle",
@@ -3673,16 +3700,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.0.2",
+            "version": "v5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "f3917ecef35a4e4d98b303eb9fee463bc983f379"
+                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/f3917ecef35a4e4d98b303eb9fee463bc983f379",
-                "reference": "f3917ecef35a4e4d98b303eb9fee463bc983f379",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
+                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
                 "shasum": ""
             },
             "require": {
@@ -3718,7 +3745,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-08-30 12:35:21"
+            "time": "2013-12-03 13:33:24"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -4161,10 +4188,6 @@
     "stability-flags": {
         "doctrine/migrations": 20,
         "doctrine/doctrine-migrations-bundle": 20,
-        "sonata-project/admin-bundle": 20,
-        "sonata-project/doctrine-orm-admin-bundle": 20,
-        "sonata-project/media-bundle": 20,
-        "sonata-project/user-bundle": 20,
         "phpword/phpword": 20,
         "fp/lightopenid": 20
     },
