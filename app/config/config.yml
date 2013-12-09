@@ -104,6 +104,9 @@ sonata_admin:
         endroid_behavior.publishable.extension:
             implements:
                 - Endroid\Bundle\BehaviorBundle\Model\PublishableInterface
+        endroid_behavior.sortable.extension:
+            implements:
+                - Endroid\Bundle\BehaviorBundle\Model\SortableInterface
         endroid_behavior.translation.extension:
             implements:
                 - Endroid\Bundle\BehaviorBundle\Model\TranslationInterface

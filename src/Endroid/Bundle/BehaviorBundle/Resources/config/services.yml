@@ -17,6 +17,11 @@ services:
         tags:
             - { name: doctrine.event_listener, event: prePersist, method: onPrePersist }
 
+    endroid_behavior.sortable.extension:
+        class: Endroid\Bundle\BehaviorBundle\Admin\Extension\SortableAdminExtension
+        tags:
+            - { name: sonata.admin.extension }
+
     endroid_behavior.sortable.listener:
         class: Endroid\Bundle\BehaviorBundle\EventListener\SortableListener
         tags:

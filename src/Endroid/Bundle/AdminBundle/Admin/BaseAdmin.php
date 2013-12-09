@@ -21,39 +21,12 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
     use ContainerAwareTrait;
 
     /**
-     * Configure the list fields for the current admin.
-     *
-     * @param $listMapper
-     */
-    protected function configureListFields(ListMapper $listMapper)
-    {
-        $reflectionClass = new ReflectionClass($this->getClass());
-
-        // Add up and down buttons to sortable items
-        if ($reflectionClass->implementsInterface('Endroid\Bundle\BehaviorBundle\Model\SortableInterface')) {
-            $listMapper
-                ->add('up', 'string', array('label' => ' ', 'template' => 'EndroidMenuBundle:MenuItemAdmin:list_field_up.html.twig'))
-                ->add('down', 'string', array('label' => ' ', 'template' => 'EndroidMenuBundle:MenuItemAdmin:list_field_down.html.twig'))
-            ;
-        }
-    }
-
-    /**
      * Configure the default routes for the current admin.
      *
      * @param $collection
      */
     protected function configureRoutes(RouteCollection $collection)
     {
-        $reflectionClass = new ReflectionClass($this->getClass());
-
-        // Add up and down routes to sortable items
-        if ($reflectionClass->implementsInterface('Endroid\Bundle\BehaviorBundle\Model\SortableInterface')) {
-            $collection->add('up', $this->getRouterIdParameter().'/up');
-            $collection->add('down', $this->getRouterIdParameter().'/down');
-        }
-
-        // By default remove export route
         $collection->remove('export');
     }
 
