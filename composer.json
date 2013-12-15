@@ -23,6 +23,7 @@
         "doctrine/migrations": "dev-master",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "sonata-project/admin-bundle": "~2.2",
+        "sonata-project/core-bundle": "~2.2",
         "sonata-project/doctrine-orm-admin-bundle": "~2.2",
         "sonata-project/media-bundle": "~2.2",
         "sonata-project/user-bundle": "~2.2",
@@ -38,7 +39,8 @@
         "jms/i18n-routing-bundle": "~1.0",
         "gedmo/doctrine-extensions": "~2.3",
         "fp/lightopenid": "dev-master",
-        "fp/openid-bundle": "~2.0"
+        "fp/openid-bundle": "~2.0",
+        "endroid/google-analytics-bundle": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [

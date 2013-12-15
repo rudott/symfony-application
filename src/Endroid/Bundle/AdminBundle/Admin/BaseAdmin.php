@@ -21,7 +21,7 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
     use ContainerAwareTrait;
 
     /**
-     * Configure the default routes for the current admin.
+     * Configures the routes.
      *
      * @param $collection
      */
@@ -31,7 +31,7 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
     }
 
     /**
-     * Returns the persistent parameters for the current admin.
+     * Returns the persistent parameters.
      *
      * @return array
      */
@@ -60,10 +60,10 @@ class BaseAdmin extends Admin implements ContainerAwareInterface
     }
 
     /**
-     * Create the query used to retrieve the list.
+     * Creates the query used to retrieve the list.
      *
-     * @param  string                                           $context
-     * @return \Sonata\AdminBundle\Datagrid\ProxyQueryInterface
+     * @param  string $context
+     * @return ProxyQueryInterface
      */
     public function createQuery($context = 'list')
     {

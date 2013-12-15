@@ -19,6 +19,12 @@ class TraversableAdminExtension extends AdminExtension implements ContainerAware
 {
     use ContainerAwareTrait;
 
+    /**
+     * Handles object creation.
+     *
+     * @param AdminInterface $admin
+     * @param mixed $object
+     */
     public function alterNewInstance(AdminInterface $admin, $object)
     {
         if ($object->getParent() == null) {
@@ -30,6 +36,11 @@ class TraversableAdminExtension extends AdminExtension implements ContainerAware
         }
     }
 
+    /**
+     * Configures form fields.
+     *
+     * @param FormMapper $formMapper
+     */
     public function configureFormFields(FormMapper $formMapper)
     {
         $formMapper

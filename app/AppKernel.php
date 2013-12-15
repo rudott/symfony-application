@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Fp\OpenIdBundle\FpOpenIdBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\MediaBundle\SonataMediaBundle(),
@@ -40,6 +41,7 @@ class AppKernel extends Kernel
             // Project specific bundles
             new Endroid\Bundle\AdminBundle\EndroidAdminBundle(),
             new Endroid\Bundle\BehaviorBundle\EndroidBehaviorBundle(),
+            new Endroid\Bundle\GoogleAnalyticsBundle\EndroidGoogleAnalyticsBundle(),
             new Endroid\Bundle\MediaBundle\EndroidMediaBundle(),
             new Endroid\Bundle\MenuBundle\EndroidMenuBundle(),
             new Endroid\Bundle\NewsBundle\EndroidNewsBundle(),
