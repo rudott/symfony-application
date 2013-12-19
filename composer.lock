@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5ec499b8b546dea030b1fc682fdc457d",
+    "hash": "05168425459f216d5cc1c7c4da555b66",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1750,16 +1750,16 @@
         },
         {
             "name": "knplabs/knp-components",
-            "version": "1.2.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/knp-components.git",
-                "reference": "d18fa34bd7c22a725b71fd655232c9ef2ac0e29b"
+                "reference": "61dfa0372168ddf1a9e0061b68d3fb6ea5996c04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/d18fa34bd7c22a725b71fd655232c9ef2ac0e29b",
-                "reference": "d18fa34bd7c22a725b71fd655232c9ef2ac0e29b",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/61dfa0372168ddf1a9e0061b68d3fb6ea5996c04",
+                "reference": "61dfa0372168ddf1a9e0061b68d3fb6ea5996c04",
                 "shasum": ""
             },
             "require": {
@@ -1807,7 +1807,7 @@
                 "pager",
                 "paginator"
             ],
-            "time": "2013-03-14 07:31:46"
+            "time": "2013-12-18 14:28:37"
         },
         {
             "name": "knplabs/knp-menu",
@@ -1924,17 +1924,17 @@
         },
         {
             "name": "knplabs/knp-paginator-bundle",
-            "version": "2.3.3",
+            "version": "dev-master",
             "target-dir": "Knp/Bundle/PaginatorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
-                "reference": "2.3.3"
+                "reference": "e817cbddfa13cb9a72bf1ddcaf6a36b99cda5c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/2.3.3",
-                "reference": "2.3.3",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/e817cbddfa13cb9a72bf1ddcaf6a36b99cda5c2d",
+                "reference": "e817cbddfa13cb9a72bf1ddcaf6a36b99cda5c2d",
                 "shasum": ""
             },
             "require": {
@@ -1979,7 +1979,7 @@
                 "pagination",
                 "paginator"
             ],
-            "time": "2013-07-30 20:36:09"
+            "time": "2013-12-19 09:14:09"
         },
         {
             "name": "knplabs/knp-snappy",
@@ -4314,6 +4314,8 @@
         "sonata-project/media-bundle": 20,
         "sonata-project/user-bundle": 20,
         "phpword/phpword": 20,
+        "knplabs/knp-paginator-bundle": 20,
+        "knplabs/knp-components": 20,
         "fp/lightopenid": 20
     },
     "platform": {
