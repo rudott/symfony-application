@@ -117,13 +117,13 @@ sonata_admin:
 knp_snappy:
     pdf:
         enabled:    true
-        binary:     %kernel.root_dir%/Resources/java/wkhtmltopdf
+        binary:     %wkhtmltopdf_path%
         options:
             - { name: ignore-load-errors, value: true }
             - { name: lowquality, value: false }
     image:
         enabled:    true
-        binary:     %kernel.root_dir%/Resources/java/wkhtmltoimage
+        binary:     %wkhtmltoimage_path%
         options:    []
 
 knp_paginator:

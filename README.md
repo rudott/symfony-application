@@ -54,6 +54,10 @@ to get a quick impression of the full package.
 
 See http://www.elasticsearch.org/guide/reference/setup/installation/ for more information.
 
+### Install wkhtmltopdf and wkhtmltoimage for HTML to PDF/image conversion (optional)
+
+See https://code.google.com/p/wkhtmltopdf/ and  for more information.
+
 ### Load fixtures (optional)
 
     php app/console doctrine:fixtures:load -n

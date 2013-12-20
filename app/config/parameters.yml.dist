@@ -16,5 +16,7 @@ parameters:
     locales:                    [en, fr, de, nl]
     secret:                     ThisTokenIsNotSoSecretChangeIt
 
+    wkhtmltopdf_path:           /usr/local/bin/wkhtmltopdf
+    wkhtmltoimage_path:         /usr/local/bin/wkhtmltoimage
     google_analytics_tracker:   ~
     search_index:               ~
