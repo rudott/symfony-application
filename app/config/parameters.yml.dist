@@ -17,3 +17,4 @@ parameters:
     secret:                     ThisTokenIsNotSoSecretChangeIt
 
     google_analytics_tracker:   ~
+    search_index:               ~

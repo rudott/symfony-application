@@ -22,7 +22,7 @@ class SearchController extends Controller
     public function indexAction()
     {
         $search = $this->getRequest()->query->get('q');
-        $finder = $this->container->get('fos_elastica.finder.website');
+        $finder = $this->get('fos_elastica.finder.'.$this->container->getParameter('search_index'));
 
         $queryString = new \Elastica_Query_QueryString();
         $queryString->setQuery('*'.$search.'*');
