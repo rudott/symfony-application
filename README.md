@@ -16,29 +16,6 @@ to get a quick impression of the full package.
   * Front end - [`symfony-application.endroid.nl`](http://symfony-application.endroid.nl/)
   * Admin - [`symfony-application.endroid.nl/admin/dashboard`](http://symfony-application.endroid.nl/admin/dashboard) (admin/admin)
 
-## Features
-
-  * Base layout
-    * Twitter Bootstrap 3
-    * Multilanguage support
-  * Admin
-    * User management
-    * Google OpenID login
-    * Multilanguage support
-    * Admins: menus, pages, news, media, forms
-  * Behaviors
-    * Publishable
-    * Sluggable
-    * Sortable
-    * Timestampable
-    * Translatable
-    * Traversable
-  * Search engine
-    * ElasticSearch
-  * Demo functionality
-    * Pages, news, contact form
-  * Sitemap HTML and XML
-
 ## Installation
 
 ### Create the project
@@ -54,7 +31,7 @@ to get a quick impression of the full package.
 
 See http://www.elasticsearch.org/guide/reference/setup/installation/ for more information.
 
-### Install wkhtmltopdf and wkhtmltoimage for HTML to PDF/image conversion (optional)
+### Install wkhtmltopdf and wkhtmltoimage (optional)
 
 See https://code.google.com/p/wkhtmltopdf/ and  for more information.
 
