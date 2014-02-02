@@ -23,7 +23,7 @@ class TraversableAdminExtension extends AdminExtension implements ContainerAware
      * Handles object creation.
      *
      * @param AdminInterface $admin
-     * @param mixed $object
+     * @param mixed          $object
      */
     public function alterNewInstance(AdminInterface $admin, $object)
     {

@@ -12,7 +12,6 @@ namespace Endroid\Bundle\BehaviorBundle\Admin\Extension;
 use Sonata\AdminBundle\Admin\AdminExtension;
 use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Datagrid\ListMapper;
-use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 
 class SortableAdminExtension extends AdminExtension
@@ -33,7 +32,7 @@ class SortableAdminExtension extends AdminExtension
     /**
      * Configure the default routes for the current admin.
      *
-     * @param AdminInterface $admin
+     * @param AdminInterface  $admin
      * @param RouteCollection $collection
      */
     public function configureRoutes(AdminInterface $admin, RouteCollection $collection)
@@ -43,7 +42,7 @@ class SortableAdminExtension extends AdminExtension
             ->add('down', $admin->getRouterIdParameter().'/down');
     }
 
-    public function createQuery() {
-
+    public function createQuery()
+    {
     }
 }
