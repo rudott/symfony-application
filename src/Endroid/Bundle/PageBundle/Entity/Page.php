@@ -18,13 +18,14 @@ use Endroid\Bundle\BehaviorBundle\Model\TimestampableInterface;
 use Endroid\Bundle\BehaviorBundle\Model\TimestampableTrait;
 use Endroid\Bundle\BehaviorBundle\Model\TranslationInterface;
 use Endroid\Bundle\BehaviorBundle\Model\TranslationTrait;
+use Endroid\Bundle\PageBundle\Model\PageInterface;
 use Netvlies\Bundle\NetvliesFormBundle\Entity\Form;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="page")
  */
-class Page implements PublishableInterface, SluggableInterface, TimestampableInterface, TranslationInterface
+class Page implements PageInterface, PublishableInterface, SluggableInterface, TimestampableInterface, TranslationInterface
 {
     use PublishableTrait;
     use SluggableTrait;

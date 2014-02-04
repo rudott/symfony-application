@@ -1,8 +1,11 @@
-services:
+parameters:
+    endroid_page.page.handler.class: Endroid\Bundle\PageBundle\Handler\PageHandler
+    endroid_page.page.class: Endroid\Bundle\PageBundle\Entity\Page
 
+services:
     endroid_page.admin.page:
         class: Endroid\Bundle\PageBundle\Admin\PageAdmin
-        arguments: [null,  Endroid\Bundle\PageBundle\Entity\Page, null]
+        arguments: [ null, Endroid\Bundle\PageBundle\Entity\Page, null]
         calls:
             - [ setContainer, [ @service_container ] ]
         tags:
@@ -14,3 +17,7 @@ services:
             - [ setContainer, [ @service_container ] ]
         tags:
             -  { name: endroid_route.provider }
+
+    endroid_page.page.handler:
+        class: %endroid_page.page.handler.class%
+        arguments: [ @doctrine.orm.entity_manager, %endroid_page.page.class% ]

@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Fp\OpenIdBundle\FpOpenIdBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -37,6 +38,9 @@ class AppKernel extends Kernel
             new FOS\ElasticaBundle\FOSElasticaBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+            new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
 
             // Project specific bundles
             new Endroid\Bundle\AdminBundle\EndroidAdminBundle(),
@@ -46,6 +50,7 @@ class AppKernel extends Kernel
             new Endroid\Bundle\MenuBundle\EndroidMenuBundle(),
             new Endroid\Bundle\NewsBundle\EndroidNewsBundle(),
             new Endroid\Bundle\PageBundle\EndroidPageBundle(),
+            new Endroid\Bundle\RestBundle\EndroidRestBundle(),
             new Endroid\Bundle\RouteBundle\EndroidRouteBundle(),
             new Endroid\Bundle\SearchBundle\EndroidSearchBundle(),
             new Endroid\Bundle\SiteBundle\EndroidSiteBundle(),

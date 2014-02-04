@@ -6,6 +6,16 @@ endroid_news:
     type:       annotation
     prefix:     /news
 
+endroid_rest:
+    resource:   "@EndroidRestBundle/Resources/config/routes.yml"
+    type:       rest
+    prefix:     /api
+    options:    { i18n: false }
+
+NelmioApiDocBundle:
+    resource:   "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:     /apidoc
+
 endroid_search:
     resource:   "@EndroidSearchBundle/Controller/"
     type:       annotation
@@ -30,6 +40,12 @@ sonata_user:
 fp_openid_security_check:
     pattern: /admin/login_check_openid
     defaults: { _controller: FpOpenIdBundle:Security:check }
+
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+fos_oauth_server_authorize:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"
 
 gallery:
     resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'

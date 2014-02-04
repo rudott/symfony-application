@@ -18,12 +18,13 @@ use Endroid\Bundle\BehaviorBundle\Model\TimestampableInterface;
 use Endroid\Bundle\BehaviorBundle\Model\TimestampableTrait;
 use Endroid\Bundle\BehaviorBundle\Model\TranslationInterface;
 use Endroid\Bundle\BehaviorBundle\Model\TranslationTrait;
+use Endroid\Bundle\NewsBundle\Model\ArticleInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="news_article")
  */
-class Article implements PublishableInterface, SluggableInterface, TimestampableInterface, TranslationInterface
+class Article implements ArticleInterface, PublishableInterface, SluggableInterface, TimestampableInterface, TranslationInterface
 {
     use PublishableTrait;
     use SluggableTrait;

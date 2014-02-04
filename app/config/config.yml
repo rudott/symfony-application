@@ -22,6 +22,10 @@ framework:
     fragments:       ~
     http_method_override: true
 
+sensio_framework_extra:
+    view:
+        annotations: false
+
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
@@ -180,3 +184,57 @@ raul_fraile_ladybug:
 endroid_google_analytics:
     trackers:
         default: %google_analytics_tracker%
+
+fos_rest:
+    param_fetcher_listener: true
+    view:
+        view_response_listener: 'force'
+        formats:
+            xml:  true
+            json: true
+        templating_formats:
+            html: true
+    format_listener:
+        rules:
+            - { path: ^/, priorities: [ html, json, xml ], fallback_format: json, prefer_extension: true }
+    exception:
+        codes:
+            Symfony\Component\Routing\Exception\ResourceNotFoundException: 404
+            Doctrine\ORM\OptimisticLockException: HTTP_CONFLICT
+        messages:
+            Symfony\Component\Routing\Exception\ResourceNotFoundException: true
+    allowed_methods_listener: true
+    access_denied_listener:
+        json: true
+    body_listener: true
+    disable_csrf_role: ROLE_API
+
+jms_serializer:
+    metadata:
+        directories:
+            news:
+                namespace_prefix: "Endroid\\Bundle\\NewsBundle"
+                path: "@EndroidRestBundle/Resources/config/serializer"
+            page:
+                namespace_prefix: "Endroid\\Bundle\\PageBundle"
+                path: "@EndroidRestBundle/Resources/config/serializer"
+            user:
+                namespace_prefix: "Endroid\\Bundle\\UserBundle"
+                path: "@EndroidRestBundle/Resources/config/serializer"
+
+nelmio_api_doc:
+    name: Symfony Application API
+    sandbox:
+        enabled: true
+        authentication:
+            name: access_token
+            delivery: query
+
+fos_oauth_server:
+    db_driver:            orm
+    client_class:         Endroid\Bundle\RestBundle\Entity\Client
+    access_token_class:   Endroid\Bundle\RestBundle\Entity\AccessToken
+    refresh_token_class:  Endroid\Bundle\RestBundle\Entity\RefreshToken
+    auth_code_class:      Endroid\Bundle\RestBundle\Entity\AuthCode
+    service:
+        user_provider:    fos_user.user_manager

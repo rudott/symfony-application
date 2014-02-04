@@ -15,7 +15,6 @@ use FOS\UserBundle\Entity\UserManager as FOSUserManager;
 use FOS\UserBundle\Util\TokenGenerator;
 use Fp\OpenIdBundle\Security\Core\User\UserManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 class UserManager extends FOSUserManager implements UserManagerInterface, ContainerAwareInterface
 {

@@ -9,14 +9,15 @@
 
 namespace Endroid\Bundle\UserBundle\Entity;
 
-use Sonata\UserBundle\Entity\BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Endroid\Bundle\UserBundle\Model\UserInterface;
+use Sonata\UserBundle\Entity\BaseUser;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
  */
-class User extends BaseUser
+class User extends BaseUser implements UserInterface
 {
     /**
      * @ORM\Id
