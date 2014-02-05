@@ -10,7 +10,6 @@
 /web/bundles/
 /web/uploads/
 /composer.phar
-/php-cs-fixer.phar
 
 # Deployment
 /app/config/deploy.rb
