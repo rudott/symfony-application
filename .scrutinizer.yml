@@ -61,7 +61,7 @@ tools:
             - features
 
     php_analyzer:
-        enabled:              true
+        enabled:              false
         filter:
             excluded_paths:
                 - 'bin/*'
