@@ -37,9 +37,9 @@ twig:
 
 assetic:
     debug:          %kernel.debug%
-    use_controller: false
+    use_controller: true
     bundles:        [ EndroidSiteBundle ]
-    java: /usr/bin/java
+    java:           /usr/bin/java
     filters:
         cssrewrite: ~
         yui_css:
@@ -194,9 +194,9 @@ fos_rest:
             json: true
         templating_formats:
             html: true
-    format_listener:
-        rules:
-            - { path: ^/, priorities: [ html, json, xml ], fallback_format: json, prefer_extension: true }
+#    format_listener:
+#        rules:
+#            - { path: ^/, priorities: [ html, json ], fallback_format: json, prefer_extension: true }
     exception:
         codes:
             Symfony\Component\Routing\Exception\ResourceNotFoundException: 404

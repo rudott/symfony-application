@@ -60,3 +60,21 @@ footer .navbar-nav .active a, footer .navbar-nav .active a:hover {
     border: 5px solid #ccc;
     box-shadow: none;
 }
+
+.jumbotron {
+    text-align: center;
+    padding: 10px 50px;
+    border-radius: 30px;
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.jumbotron a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.jumbotron .btn {
+    margin-top: 10px;
+    text-decoration: none;
+}

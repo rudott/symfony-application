@@ -19,4 +19,4 @@ parameters:
     wkhtmltopdf_path:           /usr/local/bin/wkhtmltopdf
     wkhtmltoimage_path:         /usr/local/bin/wkhtmltoimage
     google_analytics_tracker:   ~
-    search_index:               ~
+    search_index:               default
