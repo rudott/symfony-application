@@ -64,7 +64,7 @@ footer .navbar-nav .active a, footer .navbar-nav .active a:hover {
 .jumbotron {
     text-align: center;
     padding: 10px 50px;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #2980b9;
     color: #fff;
 }

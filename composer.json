@@ -22,10 +22,9 @@
         "doctrine/doctrine-fixtures-bundle": "~2.1",
         "doctrine/migrations": "dev-master",
         "doctrine/doctrine-migrations-bundle": "dev-master",
-        "sonata-project/core-bundle": "~2.2@dev",
-        "sonata-project/doctrine-orm-admin-bundle": "~2.2@dev",
-        "sonata-project/media-bundle": "~2.2@dev",
-        "sonata-project/user-bundle": "~2.2@dev",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.2",
+        "sonata-project/media-bundle": "~2.2",
+        "sonata-project/user-bundle": "~2.2",
         "ircmaxell/password-compat": "~1.0",
         "raulfraile/ladybug-bundle": "~1.0",
         "netvlies/form-bundle": "~1.0",
@@ -44,7 +43,9 @@
         "fp/openid-bundle": "~2.0",
         "endroid/google-analytics-bundle": "~1.0",
         "nelmio/api-doc-bundle": "~2.4",
-        "friendsofsymfony/oauth-server-bundle": "~1.4"
+        "friendsofsymfony/oauth-server-bundle": "~1.4",
+        "snc/redis-bundle": "~1.1",
+        "predis/predis": "~0.8"
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "~0.4",

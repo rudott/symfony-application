@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "952a90f7fbe04daef812ce3f78dfa45a",
+    "hash": "334dcae71f620dd1e462e08e2bdee997",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -836,16 +836,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "84373d05a4198ec380918d535abf83c454c3867f"
+                "reference": "0363a5548d9263f979f9ca149decb9cfc66419ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/84373d05a4198ec380918d535abf83c454c3867f",
-                "reference": "84373d05a4198ec380918d535abf83c454c3867f",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/0363a5548d9263f979f9ca149decb9cfc66419ab",
+                "reference": "0363a5548d9263f979f9ca149decb9cfc66419ab",
                 "shasum": ""
             },
             "require": {
@@ -908,7 +908,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-11-12 12:40:13"
+            "time": "2014-02-08 16:35:09"
         },
         {
             "name": "endroid/google-analytics-bundle",
@@ -3131,6 +3131,53 @@
             "time": "2012-12-25 21:55:12"
         },
         {
+            "name": "predis/predis",
+            "version": "v0.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "5f2eea628eb465d866ad2771927d83769c8f956c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/5f2eea628eb465d866ad2771927d83769c8f956c",
+                "reference": "5f2eea628eb465d866ad2771927d83769c8f956c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Predis": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete PHP client library for Redis",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2014-01-16 14:10:29"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.0",
             "source": {
@@ -3694,6 +3741,70 @@
             "time": "2013-08-21 18:09:35"
         },
         {
+            "name": "snc/redis-bundle",
+            "version": "1.1.7",
+            "target-dir": "Snc/RedisBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/snc/SncRedisBundle.git",
+                "reference": "dc7aaaaa7f1e9d1c8edad62657efa4ac18088ae3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/dc7aaaaa7f1e9d1c8edad62657efa4ac18088ae3",
+                "reference": "dc7aaaaa7f1e9d1c8edad62657efa4ac18088ae3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": ">=2.1,<3.0",
+                "symfony/yaml": ">=2.1,<3.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*",
+                "predis/predis": "0.8.*",
+                "symfony/console": ">=2.1,<3.0"
+            },
+            "suggest": {
+                "monolog/monolog": "If you want to use the monolog redis handler.",
+                "predis/predis": "If you want to use predis (currently only v0.8.x is supported).",
+                "symfony/console": "If you want to use commands to interact with the redis database"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Snc\\RedisBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Henrik Westphal",
+                    "email": "henrik.westphal@gmail.com"
+                },
+                {
+                    "name": "Community contributors",
+                    "homepage": "https://github.com/snc/SncRedisBundle/contributors"
+                }
+            ],
+            "description": "A Redis bundle for Symfony2",
+            "homepage": "https://github.com/snc/SncRedisBundle",
+            "keywords": [
+                "nosql",
+                "redis",
+                "symfony"
+            ],
+            "time": "2013-11-24 12:43:35"
+        },
+        {
             "name": "sonata-project/admin-bundle",
             "version": "2.2.9",
             "target-dir": "Sonata/AdminBundle",
@@ -3840,17 +3951,17 @@
         },
         {
             "name": "sonata-project/core-bundle",
-            "version": "dev-master",
+            "version": "2.2.4",
             "target-dir": "Sonata/CoreBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "7c3e7c8815ca286924164a0d9ce8a4a5806b013e"
+                "reference": "991143570bf19ddd37f5bfb8af7382c4aa90de24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/7c3e7c8815ca286924164a0d9ce8a4a5806b013e",
-                "reference": "7c3e7c8815ca286924164a0d9ce8a4a5806b013e",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/991143570bf19ddd37f5bfb8af7382c4aa90de24",
+                "reference": "991143570bf19ddd37f5bfb8af7382c4aa90de24",
                 "shasum": ""
             },
             "require": {
@@ -3861,8 +3972,6 @@
                 "twig/twig": "~1.12"
             },
             "require-dev": {
-                "doctrine/orm": "~2.4",
-                "doctrine/phpcr-odm": "~1.0",
                 "sonata-project/exporter": "~1.3"
             },
             "type": "symfony-bundle",
@@ -3896,7 +4005,7 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2014-02-06 11:03:10"
+            "time": "2014-01-15 14:43:01"
         },
         {
             "name": "sonata-project/doctrine-extensions",
@@ -3948,36 +4057,24 @@
         },
         {
             "name": "sonata-project/doctrine-orm-admin-bundle",
-            "version": "dev-master",
+            "version": "2.2.6",
             "target-dir": "Sonata/DoctrineORMAdminBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "ccc4f2b9abe1788d3d8460d92db27aa3d174f48b"
+                "reference": "da9a1b2bee152b5fd90c27ef152006c0e5ead9d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/ccc4f2b9abe1788d3d8460d92db27aa3d174f48b",
-                "reference": "ccc4f2b9abe1788d3d8460d92db27aa3d174f48b",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/da9a1b2bee152b5fd90c27ef152006c0e5ead9d7",
+                "reference": "da9a1b2bee152b5fd90c27ef152006c0e5ead9d7",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "~2.3",
                 "sonata-project/admin-bundle": "~2.2,>=2.2.2",
                 "sonata-project/core-bundle": "~2.2@dev",
-                "sonata-project/exporter": "~1.3,>=1.3.1",
-                "symfony/console": "~2.2",
-                "symfony/doctrine-bridge": "~2.2",
-                "symfony/form": "~2.2",
-                "symfony/framework-bundle": "~2.2",
-                "symfony/security": "~2.2"
-            },
-            "require-dev": {
-                "simplethings/entity-audit-bundle": "~0.1",
-                "sonata-project/admin-bundle": "~2.2@dev"
-            },
-            "suggest": {
-                "simplethings/entity-audit-bundle": "If you want to support for versioning of entities and their associations."
+                "symfony/symfony": "~2.2"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4014,7 +4111,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2014-02-06 11:30:56"
+            "time": "2014-01-15 16:57:35"
         },
         {
             "name": "sonata-project/easy-extends-bundle",
@@ -4226,17 +4323,17 @@
         },
         {
             "name": "sonata-project/media-bundle",
-            "version": "dev-master",
+            "version": "2.2.7",
             "target-dir": "Sonata/MediaBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataMediaBundle.git",
-                "reference": "f6f671ea904a9ece5d79225269630b256a0947b6"
+                "reference": "06ef1cdf10fceba34084eee210c4353f82f0e7a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/f6f671ea904a9ece5d79225269630b256a0947b6",
-                "reference": "f6f671ea904a9ece5d79225269630b256a0947b6",
+                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/06ef1cdf10fceba34084eee210c4353f82f0e7a3",
+                "reference": "06ef1cdf10fceba34084eee210c4353f82f0e7a3",
                 "shasum": ""
             },
             "require": {
@@ -4251,10 +4348,7 @@
             },
             "require-dev": {
                 "amazonwebservices/aws-sdk-for-php": "~1.5",
-                "doctrine/mongodb-odm": "~1.0@dev",
-                "friendsofsymfony/rest-bundle": "~1.2",
                 "sonata-project/doctrine-orm-admin-bundle": "~2.2@dev,>=2.2.1",
-                "sonata-project/doctrine-phpcr-admin-bundle": "~1.0",
                 "sonata-project/formatter-bundle": "~2.2@dev",
                 "sonata-project/seo-bundle": "~1.1"
             },
@@ -4263,8 +4357,7 @@
                 "liip/imagine-bundle": "~0.9",
                 "rackspace/php-opencloud": "~1.6",
                 "sonata-project/doctrine-orm-admin-bundle": "~2.2,>=2.2.1",
-                "sonata-project/seo-bundle": "~1.1",
-                "tilleuls/ckeditor-sonata-mediabundle": "~1.0"
+                "sonata-project/seo-bundle": "~1.1"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4304,7 +4397,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2014-02-06 14:33:41"
+            "time": "2014-01-17 14:42:55"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -4376,17 +4469,17 @@
         },
         {
             "name": "sonata-project/user-bundle",
-            "version": "dev-master",
+            "version": "2.2.3",
             "target-dir": "Sonata/UserBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "8a15229f4712b97f5da2bce72f3eea409e13fe37"
+                "reference": "45ea9dc475b7f087fe9bbd81885473c93ab978b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/8a15229f4712b97f5da2bce72f3eea409e13fe37",
-                "reference": "8a15229f4712b97f5da2bce72f3eea409e13fe37",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/45ea9dc475b7f087fe9bbd81885473c93ab978b5",
+                "reference": "45ea9dc475b7f087fe9bbd81885473c93ab978b5",
                 "shasum": ""
             },
             "require": {
@@ -4441,7 +4534,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2014-02-06 13:56:22"
+            "time": "2014-01-22 18:26:31"
         },
         {
             "name": "stfalcon/tinymce-bundle",
@@ -6295,16 +6388,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "3.7.30",
+            "version": "3.7.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2f33258fa5a0c330515b7deba2bc040fa5c3953b"
+                "reference": "d24e9877331039582497052cc3c4d9f465b88210"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2f33258fa5a0c330515b7deba2bc040fa5c3953b",
-                "reference": "2f33258fa5a0c330515b7deba2bc040fa5c3953b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d24e9877331039582497052cc3c4d9f465b88210",
+                "reference": "d24e9877331039582497052cc3c4d9f465b88210",
                 "shasum": ""
             },
             "require": {
@@ -6365,7 +6458,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-01-31 08:54:33"
+            "time": "2014-02-03 07:46:27"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -6474,10 +6567,6 @@
     "stability-flags": {
         "doctrine/migrations": 20,
         "doctrine/doctrine-migrations-bundle": 20,
-        "sonata-project/core-bundle": 20,
-        "sonata-project/doctrine-orm-admin-bundle": 20,
-        "sonata-project/media-bundle": 20,
-        "sonata-project/user-bundle": 20,
         "phpword/phpword": 20,
         "knplabs/knp-paginator-bundle": 20,
         "knplabs/knp-components": 20,

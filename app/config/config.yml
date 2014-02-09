@@ -37,7 +37,7 @@ twig:
 
 assetic:
     debug:          %kernel.debug%
-    use_controller: true
+    use_controller: false
     bundles:        [ EndroidSiteBundle ]
     java:           /usr/bin/java
     filters:
@@ -190,13 +190,12 @@ fos_rest:
     view:
         view_response_listener: 'force'
         formats:
-            xml:  true
             json: true
         templating_formats:
             html: true
-    format_listener:
-        rules:
-            - { path: ^/, priorities: [ html, json ], fallback_format: json, prefer_extension: true }
+#    format_listener:
+#        rules:
+#            - { path: ^/, priorities: [ json ], fallback_format: html, prefer_extension: true }
     exception:
         codes:
             Symfony\Component\Routing\Exception\ResourceNotFoundException: 404
@@ -206,7 +205,7 @@ fos_rest:
     allowed_methods_listener: true
     access_denied_listener:
         json: true
-    body_listener: false
+    body_listener: true
     disable_csrf_role: ROLE_API
 
 jms_serializer:
@@ -238,3 +237,11 @@ fos_oauth_server:
     auth_code_class:      Endroid\Bundle\RestBundle\Entity\AuthCode
     service:
         user_provider:    fos_user.user_manager
+
+snc_redis:
+    clients:
+        default:
+            type: predis
+            alias: default
+            dsn: redis://localhost
+            logging: %kernel.debug%

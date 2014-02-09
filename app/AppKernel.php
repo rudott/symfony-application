@@ -41,6 +41,7 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
+            new Snc\RedisBundle\SncRedisBundle(),
 
             // Project specific bundles
             new Endroid\Bundle\AdminBundle\EndroidAdminBundle(),

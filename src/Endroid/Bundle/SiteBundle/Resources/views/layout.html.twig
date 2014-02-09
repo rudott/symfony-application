@@ -63,17 +63,27 @@
 
             </div>
 
-        {% endblock body %}
+            <div class="container">
+                <hr>
+                <footer>
+                    <p class="pull-right">&copy; Symfony Application {{ 'now'|date('Y') }}</p>
+                    <p>
+                        {{ knp_menu_render('menu_footer') }}
+                    </p>
+                </footer>
+            </div>
 
-        <div class="container">
-            <hr>
-            <footer>
-                <p class="pull-right">&copy; Symfony Application {{ 'now'|date('Y') }}</p>
-                <p>
-                    {{ knp_menu_render('menu_footer') }}
-                </p>
-            </footer>
-        </div>
+            {% javascripts
+                'bundles/endroidsite/js/jquery.min.js'
+                'bundles/endroidsite/js/bootstrap.min.js'
+                'bundles/endroidsite/js/main.js'
+                    filter='?yui_js'
+                    output='compiled/main.js'
+            %}
+            <script src="{{ asset_url }}" type="text/javascript"></script>
+            {% endjavascripts %}
+
+        {% endblock body %}
 
     </body>
 </html>
