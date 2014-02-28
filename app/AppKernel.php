@@ -43,6 +43,9 @@ class AppKernel extends Kernel
             new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
             new Snc\RedisBundle\SncRedisBundle(),
 
+            // Create JS specific bundles
+            new Symfony\Cmf\Bundle\CreateBundle\CmfCreateBundle(),
+
             // Project specific bundles
             new Endroid\Bundle\AdminBundle\EndroidAdminBundle(),
             new Endroid\Bundle\BehaviorBundle\EndroidBehaviorBundle(),
